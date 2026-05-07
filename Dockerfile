@@ -32,4 +32,4 @@ COPY --from=builder /app/next.config.* ./
 EXPOSE 3004
 
 # Railway injeta PORT — usa fallback 3004 pra dev local
-CMD ["sh", "-c", "next start -p ${PORT:-3004} -H 0.0.0.0"]
+CMD ["sh", "-c", "node_modules/.bin/next start -p ${PORT:-3004} -H 0.0.0.0"]
