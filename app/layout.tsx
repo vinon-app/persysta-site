@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
+import CookieBanner from "@/components/CookieBanner";
 
 export const metadata: Metadata = {
   title: { default: "Persysta", template: "%s — Persysta" },
@@ -34,8 +35,14 @@ export default function RootLayout({
               <Link href="/financas" className="text-ink-700 hover:text-ink-900">
                 Finanças
               </Link>
+              <Link href="/pricing" className="text-ink-700 hover:text-ink-900">
+                Preços
+              </Link>
+              {/* Login → hub central de contas (URL reservada).
+                  Hoje placeholder; futuramente vira SSO unificado real.
+                  Ver docs/PERSYSTA_SSO_ROADMAP.md (a criar). */}
               <a
-                href="https://app.persysta.com.br"
+                href="https://accounts.persysta.com"
                 className="btn-secondary text-xs"
               >
                 Login
@@ -80,6 +87,7 @@ export default function RootLayout({
             © {new Date().getFullYear()} Persysta. Todos os direitos reservados.
           </div>
         </footer>
+        <CookieBanner />
       </body>
     </html>
   );
