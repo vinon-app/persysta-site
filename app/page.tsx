@@ -50,17 +50,17 @@ export default function HomePage() {
           </p>
           <div className="flex gap-3 justify-center flex-wrap">
             <Link
-              href="/stores"
+              href="#produtos"
               className="inline-flex items-center bg-accent-500 hover:bg-accent-600 text-ink-900 rounded-md px-6 py-3 font-semibold"
             >
-              Começar com Stores
+              Ver produtos
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
             <Link
-              href="#produtos"
+              href="/pricing"
               className="inline-flex items-center border border-ink-700 hover:bg-ink-800 text-white rounded-md px-6 py-3 font-semibold"
             >
-              Ver todos os produtos
+              Ver preços
             </Link>
           </div>
         </div>
